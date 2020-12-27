@@ -1,0 +1,215 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    color: rgb(76, 84, 93);
+    margin: 10px auto;
+    font-size: 1.8rem;
+}
+
+a:active {
+    color: initial;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+p {
+    color: rgb(159, 171, 178);
+    margin: 15px auto;
+    font-size: 1.1rem;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#top {
+    background: url(/images/bg-header-desktop.png) no-repeat center top;
+}
+
+.logo {
+    padding-top: 80px;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 72px;
+}
+
+.header, .about_header, .access_head, .workflow_head {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 42px;
+}
+
+.button {
+    display: flex;
+    margin: 40px auto 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 50px;
+}
+
+#btn {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+    padding: 13px 30px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+}
+
+#btn:nth-of-type(1) {
+    background: rgba(39, 174, 96, 1.0);
+    border: 1px solid transparent;
+    border-bottom: 3px solid rgba(19, 136, 68, 1);
+    margin-right: 20px;
+}
+
+#btn:nth-of-type(2) {
+    background: rgba(142, 68, 173, 1.0);
+    border: 1px solid transparent;
+    border-bottom: 3px solid rgb(88, 45, 106, 1);
+}
+
+#btn:nth-of-type(1):hover {
+    box-shadow: 0px 0px 20px 0px rgba(19, 136, 68, 1);
+}
+
+#btn:nth-of-type(2):hover {
+    box-shadow: 0px 0px 20px 0px rgb(88, 45, 106, 1);
+}
+
+.about_header {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.big_pic {
+    display: flex;
+    justify-content: center;
+}
+
+.big_pic img {
+    max-width: 752px;
+    width: 95%;
+}
+
+.included {
+    max-width: 400px;
+    display: grid;
+    grid-gap: 20px;
+    flex-direction: column;
+}
+
+.tech h3 {
+    font-size: 1.3rem;
+}
+
+#access {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+#workflow {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.abilities {
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.flow_div {
+    display: none;
+    flex-direction: column;
+    width: 500px !important;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.flow_div:nth-of-type(1) {
+    display: flex;
+}
+
+.abilities_holder {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#prev, #next {
+    max-width: 48px;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    z-index: 20;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
