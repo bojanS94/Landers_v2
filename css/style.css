@@ -11,7 +11,11 @@ html, body {
     outline: none;
 }
 
-a {
+svg {
+    cursor: pointer;
+}
+
+a, svg, path {
     text-decoration: none;
     color: initial;
     cursor: pointer;
@@ -41,6 +45,10 @@ p {
     color: rgb(159, 171, 178);
     margin: 15px auto;
     font-size: 1.1rem;
+}
+
+section {
+    padding: 0 10px;
 }
 
 #wrapper {
@@ -134,7 +142,6 @@ p {
     align-items: center;
     justify-content: space-between;
     margin: 30px auto;
-    flex-wrap: wrap;
     max-width: 1200px;
 }
 
@@ -167,6 +174,15 @@ p {
     margin: 100px auto 0;
 }
 
+.devices {
+    margin: 30px auto;
+}
+
+.devices img {
+    max-width: 905px;
+    width: 95%;
+}
+
 #workflow {
     display: flex;
     align-items: center;
@@ -188,11 +204,11 @@ p {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    width: 500px !important;
+    max-width: 360px;
+    width: 100%;
     height: 180px;
     margin: 0 auto;
     position: absolute;
-    left: 0;
     top: 0;
 }
 
@@ -202,15 +218,20 @@ p {
 
 .abilities_holder {
     display: flex;
-    width: 500px;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
     height: 200px;
-    margin: 0px auto 50px;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
 
 #prev, #next {
-    max-width: 48px;
+    animation: fadeinout 2s infinite;
+    -webkit-animation: fadeinout 2s infinite;
+    opacity: 0;
+    max-width: 36px;
     cursor: pointer;
     position: absolute;
     top: 30%;
@@ -218,21 +239,43 @@ p {
 }
 
 #prev {
-    left: 0;
+    left: 15px;
 }
 
 #next {
-    right: 0;
+    right: 15px;
 }
 
+/* NEXT PREV KEYFRAMES */
+
+@-webkit-keyframes fadeinout {
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    50% {
+        opacity: 1;
+    }
+}
+
+/* NEXT PREV KEYFRAMES */
+
 .firms {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    grid-gap: 10px;
+    grid-gap: 20px 10px;
     margin: 30px auto;
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.firms img {
+    margin: 20px auto;
 }
 
 #download {
@@ -267,6 +310,7 @@ p {
     max-width: 600px;
     width: 100%;
     justify-content: space-evenly;
+    margin: 20px auto;
 }
 
 .link_section {
@@ -276,4 +320,63 @@ p {
 
 .link_section a:hover {
     color: rgb(38, 186, 164);
+}
+
+.social {
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.social svg:hover path {
+    fill: rgb(38, 186, 164);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    .about_content {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 30px auto 0;
+    }
+    .included, #access {
+        margin: 30px auto 0;
+        text-align: center;
+    }
+    html {
+        font-size: 88%;
+        text-align: center;
+    }
+    #workflow, .abilities_holder, .firms {
+        margin: 10px auto;
+    }
+    h1, h2, h3 {
+        font-size: 26px !important;
+    }
+    #footer {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 479px) {
+    #btn {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+    }
+    .button {
+        padding: 0 0 10px;
+    }
+    .logo img {
+        max-width: 48px;
+    }
+    #prev, #next {
+        max-width: 28px;
+    }
+    .flow_div {
+        width: 70%;
+    }
 }
